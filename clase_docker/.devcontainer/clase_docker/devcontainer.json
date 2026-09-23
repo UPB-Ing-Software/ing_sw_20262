@@ -1,0 +1,18 @@
+{
+  "name": "Clase Docker — catálogo",
+  "image": "mcr.microsoft.com/devcontainers/python:3.14-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:4": {}
+  },
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/clase_docker/catalogo",
+  "postCreateCommand": "pip install --no-cache-dir uv==0.12.17",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "catalogo" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-azuretools.vscode-docker", "ms-python.python"]
+    }
+  }
+}
